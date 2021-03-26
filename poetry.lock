@@ -76,6 +76,14 @@ version = "1.0.1"
 
 [[package]]
 category = "main"
+description = "A minimal Discord API webhooks wrapper for sending messages to a Discord channel"
+name = "discord-notify"
+optional = false
+python-versions = "*"
+version = "1.0.0"
+
+[[package]]
+category = "main"
 description = "execute discord webhooks"
 name = "discord-webhook"
 optional = false
@@ -229,7 +237,7 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [metadata]
-content-hash = "ba71070d9cb12ba7fd6391144b87bebd81765c20a8512e6311e93f1f667c1620"
+content-hash = "95a577c094f4ad90a1abbbd885a2f78513e5b010c4f5f326096dac38bc7c2c1e"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -295,6 +303,10 @@ click = [
 discord = [
     {file = "discord-1.0.1-py3-none-any.whl", hash = "sha256:9d4debb4a37845543bd4b92cb195bc53a302797333e768e70344222857ff1559"},
     {file = "discord-1.0.1.tar.gz", hash = "sha256:ff6653655e342e7721dfb3f10421345fd852c2a33f2cca912b1c39b3778a9429"},
+]
+discord-notify = [
+    {file = "discord_notify-1.0.0-py3-none-any.whl", hash = "sha256:847f92d1ead1437804649b4767c04ef7b7e69b618baa5742b607391819549b88"},
+    {file = "discord_notify-1.0.0.tar.gz", hash = "sha256:76486cb62c2885ddad55e83b51225801efc0d57195106fd0f8dbf31958780959"},
 ]
 discord-webhook = [
     {file = "discord-webhook-0.12.0.tar.gz", hash = "sha256:548568b55ad32677f58b8d113be339ae83087b262f4e8438c96efe2bd0c48a19"},

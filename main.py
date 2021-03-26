@@ -1,5 +1,4 @@
 from flask import Flask, request # Importing the Flask Library/App
-import requests
 import random  # Importing the random Library
 from discord_webhook import DiscordWebhook
 
@@ -17,12 +16,15 @@ def say():  # Function for when a post request is sent
     data = request.form['stuff'] # requesting the data input in the html form and storing it in data variable
     print(data)
 
-    url = "https://discord.com/api/webhooks/823821827285057576/oS3Y48XrLhjFOQ4H9ZWv4TLtlZoH2V-Lc1hb7clXwOZcPURc_30NHJVJcHDnhMc2dSPG"
-    # requests.post(url, data)
-    webhook = DiscordWebhook(url, data)
+    link = "https://discord.com/api/webhooks/824475546662600725/O7Ojqokl196NnnR6Hjs_---PEBAH_eEG4621WE6ieGKIpWND9PgW2xFFlEGRtVLx2gJC"
+
+    webhook = DiscordWebhook(url=link, content=data)
     response = webhook.execute()
+
+    # Notifier = dn.notifier(url)
+    # Notifier.send(data, print_message=true)
     
-    return "Thank You For Entering Data"  # returning some feedback to the user after they submit the data
+  return "Thank You For Entering Data"  # returning some feedback to the user after they submit the data
     
 
 @app.route('/') # Defining where our site will run by default
