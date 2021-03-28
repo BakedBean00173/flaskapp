@@ -12,8 +12,11 @@ app = Flask( # Creating the flask app
 def say():  # Function for when a post request is sent
   if request.method == "POST":   
     print("someone sent a post request") # logging "someone sent a post request" in the console
+    name = request.form['stuff'] # requesting the data input in the html form and storing it in data variable
+    info = request.form['morestuff']
+    
+    data = name + ", " + info
 
-    data = request.form['stuff'] # requesting the data input in the html form and storing it in data variable
     print(data)
 
     link = "https://discord.com/api/webhooks/824475546662600725/O7Ojqokl196NnnR6Hjs_---PEBAH_eEG4621WE6ieGKIpWND9PgW2xFFlEGRtVLx2gJC"
