@@ -30,6 +30,7 @@ def say():  # Function for when a post request is sent
 
     response = webhook.execute() # executing the webhook with message and url
 
+    print(response)
     
   return "Thank You For Entering Data"  # returning some feedback to the user after they submit the data
     
