@@ -1,4 +1,4 @@
-from flask import Flask, request # Importing the Flask Library/App
+from flask import Flask, request, render_template # Importing the Flask Library/App
 import random  # Importing the random Library
 from discord_webhook import DiscordWebhook
 
@@ -24,7 +24,7 @@ def say():  # Function for when a post request is sent
  
     print(data) # printing variable data to the console for easy testing and debugging
 
-    link = "https://discord.com/api/webhooks/824475546662600725/O7Ojqokl196NnnR6Hjs_---PEBAH_eEG4621WE6ieGKIpWND9PgW2xFFlEGRtVLx2gJC" # creating a seperate variable for the webhook link 
+    link = "https://discord.com/api/webhooks/823821827285057576/oS3Y48XrLhjFOQ4H9ZWv4TLtlZoH2V-Lc1hb7clXwOZcPURc_30NHJVJcHDnhMc2dSPG" # creating a seperate variable for the webhook link 
  
     webhook = DiscordWebhook(url=link, content=data) # defining the webhook using the discord_webhook library, link variable and data variable
 
@@ -32,12 +32,12 @@ def say():  # Function for when a post request is sent
 
     print(response)
     
-  return "Thank You For Entering Data"  # returning some feedback to the user after they submit the data
+  return render_template("theysentdata.html")  # returning some feedback to the user after they submit the data
     
 
 @app.route('/') # Defining where our site will run by default
 def home():
-  return "Hello World"
+  return "You're not meant to be"
 
 if __name__ == "__main__": # Makes sure this is the main process
   app.run( # Start the site
